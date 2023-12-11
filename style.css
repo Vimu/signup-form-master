@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+/* ##Primary */
+--red: hsl(0, 100%, 74%);
+--green: hsl(154, 59%, 51%);
+/* ### Accent */
+--blue: hsl(248, 32%, 49%);
+/* ### Neutral */
+--dark-blue: hsl(249, 10%, 26%);
+--grayish-blue: hsl(246, 25%, 77%);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+    background-image: url(./images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+}
+.main-sec{
+    color: white;
+    text-align: center;
+}
+.main-sec .title{
+    max-width: 300px;
+    margin: auto;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+.main-sec .desc{
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.signForm{
+    display: flex;
+    flex-direction: column;
+}
+.sign-btn{
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    margin: auto;
+    line-height: 1.5;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sign-btn span{
+    font-weight: 400;
+}
+.form{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 1rem;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control input{
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: hsl(249, 10%, 26%);
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-control.error img {
+    visibility: visible;
+}
+
+.form-control small{
+    visibility: hidden;
+    color: red;
+    position: relative;
+    float: right;
+}
+/* js error */
+.form-control .error {
+    visibility: visible;
+}
+.form-control.error input {
+    border-color: red;
+}
+.form-control.success img {
+     visibility: hidden; 
+}
+.form-control.success input {
+    border-color: green;
+} 
+.form-control .success {
+    visibility: hidden; 
+} 
+/* end js error */
+.button{
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    margin: auto;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.button:hover{
+    opacity: 0.8;
+}
+.terms{
+    text-align: center;
+    color: var(--grayish-blue);
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+.terms .terms-red{
+    color: red;
+}
+
+@media only screen and (min-width: 800px) {
+   .main{
+    display: flex;
+    flex-direction: row;
+   }
+   .main-sec{
+    max-width: 500px;
+    text-align: left;
+    display: block;
+   }
+   .main-sec .title{
+    margin: 0;
+    font-size: 2.2rem;
+    }
+    .main-sec .desc{
+        font-size: 0.9rem;
+        /* text-align: left; */
+    }
+    .form{
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+    br{
+        display: none;
+    }
+  }
