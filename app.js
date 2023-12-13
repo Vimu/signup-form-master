@@ -15,7 +15,7 @@ form.addEventListener("submit", function(e){
     const passwordValue= password.value.trim();
 
     if(fnameValue === ""){
-        setError(firstName, "First Name cannot be empty");
+        setError(firstName, "First Name cannot be empty"); 
      }else{
          setSuccess(firstName);
     }
@@ -51,6 +51,8 @@ function setError(input, error){
 
     small.classList.add("error");
     formControl.classList.add("error");
+
+    small.textContent = error;
 }
 
 function setSuccess(input){
@@ -60,6 +62,7 @@ function setSuccess(input){
     formControl.classList.add("success");
 
      small.classList.add("success");
+     small.textContent = "";
 }
 function isEmail(email){
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
